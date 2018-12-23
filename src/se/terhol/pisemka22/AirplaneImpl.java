@@ -4,8 +4,8 @@ package se.terhol.pisemka22;
  * @author Tereza Holm
  */
 public class AirplaneImpl implements Airplane {
-    Passenger[] seatList;
-    int capacity;
+    private Passenger[] seatList;
+    private int capacity;
     private final int NO_SEAT_CODE = -1;
 
     public AirplaneImpl(int capacity) {
