@@ -28,4 +28,18 @@ public class PassengerImpl implements Passenger {
     public String toString() {
         return passportNumber;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PassengerImpl) {
+            PassengerImpl passenger = (PassengerImpl) obj;
+            return this.getPassportNumber() == passenger.getPassportNumber();
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getPassportNumber().hashCode() * 31;
+    }
 }
