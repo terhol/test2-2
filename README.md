@@ -1,27 +1,17 @@
 # Test 2-1
 Second test version 2 from subject PB162 on [FI MUNI](https://www.fi.muni.cz/)
 
-## Description (Czech language only)
+## Description
 
 
-Rozhraní ani třídu `Demo` neměňte, pokud to přímo nevyžaduje zadání!
-Metody NEMUSÍTE dokumentovat pomocí JavaDoc komentářů. Používejte
-zásadně privátní atributy.
+Do not change interface or already defined classes, if the task doesn’t require it explicitly! You do not have to document methods by JavaDoc comments. Use private attributes only.
 
--   Upravte třídu `PassengerImpl` tak, aby byli dva pasažéři stejní,
-    pokud mají stejné číslo pasu.
--   Vytvořte **hlídanou** výjimku `ReservationException`. Výjimka bude
-    mít dva konstruktory: bezparametrický a s textovým popisem chyby.
--   Vytvořte třídu `AirplaneImpl` implementující rozhraní `Airplane`.
-    Implementace bude používat **pole** (nikoliv kolekce). Kapacita
-    letadla je dána parametrem konstruktoru. Pokud je zadaná hodnota
-    menší nebo rovna nule, vyhodí konstruktor vhodnou výjimku.
--   __Metody `cancelReservation()` a `makeReservation()` budou
-    využívat metodu `getPassengerReservation()` pro zjištění, jestli má
-    pasažér rezervaci a na které sedadlo__
+-   Change the `PassengerImpl` class so that two passengers are same if their passport numbers are same.
+-   Use **checked** exception ResevationException. This exception will have two constructors: one without parameter and one with textual error description.
+-   Create `AirplaneImpl` class which implements `Airplane` interface. Implementation will use **arrays** (not collections). The airplane capacity is given by parameter of constructor. If the number given is less or equal to zero, constructor will throw an exception.
+-   **Methods `cancelReservation()` and `makeReservation()` will use `getPassengerResevation()` method for checking if the passenger has a reservation and for which seat.**
 
-Třída `Demo` slouží pro vaši kontrolu funkčnosti kódu a obsahuje také
-logiku volání metod. Správný výstup by měl vypadat následovně:
+`Demo` class is for checking code functionality and also contains logic of method calling. The right output should look like this:
 
     Rezervace: [0: null 1: null ]
     Rezervace OK.
